@@ -48,5 +48,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    { // must go after SASS plugin!!
+      resolve: 'gatsby-plugin-minify-classnames',
+      // options: {
+      //   dictionary: 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789',
+      //   enableOnDevelopment: false,
+      // },
+    },
   ],
 }
