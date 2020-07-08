@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Layout from 'components/Layout/Layout'
 import SEO from 'components/SEO/SEO'
+import Intro from 'components/Intro/Intro'
 import grid from 'styles/grid'
 
 const HomePage = () => {
@@ -22,6 +23,7 @@ const HomePage = () => {
   return (
     <Layout toggleTheme={toggleTheme} theme={theme}>
       <SEO theme={theme} />
+      <Intro theme={theme} />
       <div style={{ textAlign: 'center', maxWidth: 740, margin: '0 auto' }}>
         <h1>Protect your font families like you would your real family.</h1>
       </div>
