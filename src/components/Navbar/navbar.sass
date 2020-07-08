@@ -1,5 +1,12 @@
 .navbar
-  height: 50px
+  display: flex
+  align-items: center
+  height: 56px
+  background: $lightBg
+  margin-bottom: 3rem
+
+.dark .navbar
+  background: $darkBg
 
 .social-links
 
@@ -20,4 +27,28 @@
     border-color: $accent
     box-shadow: 0 0 0 2px $accent
 
+
+.dark .theme-toggle
+  color: $darkText
+
+.theme-toggle
+  background: none
+  border: none
+  margin: 0
+  padding: 0
+  outline: none
+  color: $lightText
+  cursor: pointer
+  &:hover
+    color: $accent
+    svg > path
+      fill: $accent
+
+.theme-current
+  display: flex
+  flex-direction: row
+  align-items: center
+  align-content: flex-end
+  font-size: 0.7777777778rem
+  text-transform: uppercase
 

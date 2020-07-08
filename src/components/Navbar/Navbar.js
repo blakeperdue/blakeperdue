@@ -1,5 +1,6 @@
 import React from 'react'
 import Social from './Social/Social'
+import Theme from './Theme/Theme'
 import './navbar.sass'
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -12,7 +13,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <Social theme={theme} />
           </div>
           <div className="col-6 right">
-            <button onClick={() => {toggleTheme()}}>options</button>
+            <Theme theme={theme} toggleTheme={toggleTheme} />
           </div>
         </div>
       </div>

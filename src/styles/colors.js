@@ -2,10 +2,12 @@ const colors = {
   light: {
     bg: '#fff',
     text: '#0C1D2C',
+    waves: '#F2F4F9',
   },
   dark: {
     bg: '#0C1D2C',
-    text: '#fff'
+    text: '#fff',
+    waves: '#24386E',
   },
   accent:   '#FA004B',
   text:     '#434E63',
