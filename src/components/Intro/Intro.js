@@ -17,6 +17,11 @@ const bio = {
     headshot: 'Blake Perdue se divertindo com seu filho.',
     h1: 'Oi lá estou eu sou',
     h2: 'Eu gosto de criar coisas. Esta é uma coleção de alguns dos meus projetos recentes.',
+  },
+  zh: {
+    headshot: '布雷克·珀杜（Blake Perdue）和儿子一起玩乐。',
+    h1: '嗨，我是',
+    h2: '我喜欢创造东西。 这是我最近的一些项目的集合。',
   }
 }
 

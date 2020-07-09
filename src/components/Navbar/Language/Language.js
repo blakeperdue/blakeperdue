@@ -6,11 +6,12 @@ const languages = [
   { name: 'English', code: 'en' },
   { name: 'Español', code: 'es' },
   { name: 'Português', code: 'pt' },
+  { name: '中文简体', code: 'zh' },
 ]
 
 const langStrings = {
-  close: { en: 'Close Menu', es: 'Cerrar menú', pt: 'Fechar menu' },
-  change: { en: 'Change language', es: 'Cambiar idioma', pt: 'Mudar idioma' },
+  close: { en: 'Close Menu', es: 'Cerrar menú', pt: 'Fechar menu', zh: '关闭选单' },
+  change: { en: 'Change language', es: 'Cambiar idioma', pt: 'Mudar idioma', zh: '改变语言' },
 }
 
 const Language = ({ theme, language, setLanguage }) => {

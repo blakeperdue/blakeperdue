@@ -15,6 +15,10 @@ const ProjectsData = [
       role: 'Criador',
       info: 'Um serviço que ajuda as fundições a proteger e proteger seus arquivos de fonte, enquanto ainda permite que os clientes experimentem antes de comprá-los.',
     },
+    zh: {
+      role: '创作者',
+      info: '一种服务，可帮助类型代工厂保护和保护其字体文件，同时仍使客户能够在购买前进行尝试。',
+    }
   },
   {
     title: 'Acrobatiq',
@@ -32,6 +36,10 @@ const ProjectsData = [
       role: 'Líder de Produto',
       info: 'O Acrobatiq é uma plataforma de criação e entrega de cursos baseada em ciência da aprendizagem que otimiza o ensino, a aprendizagem e o processo de criação de cursos.',
     },
+    zh: {
+      role: '产品负责人',
+      info: 'Acrobatiq 是一个基于学习科学的课程创建和交付平台，可优化教学，学习和课程创建过程。',
+    }
   },
   {
     title: 'Automated Insights',
@@ -49,6 +57,10 @@ const ProjectsData = [
       role: 'Chefe de Produto',
       info: 'Aplicação da tecnologia de geração de linguagem natural (NLG) ao big data corporativo. Trazemos análise aumentada, desenvolvida pela NLG, para business intelligence das maiores marcas do mundo.',
     },
+    zh: {
+      role: '产品负责人',
+      info: '将自然语言生成技术应用于企业大数据。 我们将由NLG提供支持的增强分析技术引入全球最大品牌的商业智能。',
+    }
   },
   {
     title: 'Bookshelf',
@@ -66,6 +78,10 @@ const ProjectsData = [
       role: 'Gerente de Produto Sr.',
       info: 'O leitor de livros didáticos mais usado no ensino superior com aplicativos para iOS, Android, Mac, Windows, Chromebook e Kindle.',
     },
+    zh: {
+      role: '产品经理',
+      info: '高等教育中使用最广泛的教科书阅读器，其iOS，Android，Mac，Windows，Chromebook和Kindle应用程序。',
+    }
   },
   {
     title: 'RatingFive (Sold)',
@@ -83,6 +99,10 @@ const ProjectsData = [
       role: 'Fundador',
       info: 'Software que fornece um fluxo contínuo de críticas de cinco estrelas de clientes reais em sites como Google, Yelp, Facebook e Healthgrades.',
     },
+    zh: {
+      role: '创办人',
+      info: '该软件可在Google，Yelp，Facebook和Healthgrades等网站上连续提供来自真实客户的五星级评论。',
+    }
   },
   {
     title: 'First.io',
@@ -100,6 +120,10 @@ const ProjectsData = [
       role: 'Orientador',
       info: 'Análise preditiva e aprendizado de máquina para ajudar os agentes imobiliários a descobrir quem em sua rede comprará ou venderá em breve.',
     },
+    zh: {
+      role: '顾问',
+      info: '预测分析和机器学习可帮助房地产经纪人发现其网络中的谁将很快进行买卖。',
+    }
   },
   {
     title: 'SnapSuggest (Sold)',
@@ -117,6 +141,10 @@ const ProjectsData = [
       role: 'Criador',
       info: 'Um aplicativo de caixa de sugestões simples e fácil de usar no iPhone, Android e Web. Melhore o envolvimento dos funcionários e obtenha feedback acionável da sua equipe.',
     },
+    zh: {
+      role: '创作者',
+      info: 'iPhone，Android和网络上的一个简单易用的建议框应用程序。 提高员工敬业度，并从团队中收集可行的反馈。',
+    }
   },
   {
     title: 'LoyaltyGrades (Acquired)',
@@ -134,6 +162,10 @@ const ProjectsData = [
       role: 'Co-fundador',
       info: 'Uma nova abordagem para pesquisas em saúde. Avalie o médico e pratique o desempenho usando pesquisas no local de atendimento em iPads.',
     },
+    zh: {
+      role: '联合创始人',
+      info: '一种用于医疗保健调查的新方法。 使用iPad上的即时护理调查来衡量医生和实践表现。',
+    }
   },
   {
     title: 'Hello (Acquired by Uber)',
@@ -152,6 +184,10 @@ const ProjectsData = [
       role: 'Produto / Crescimento',
       info: 'O primeiro aplicativo de mensagens com guias. Uma maneira simplificada de texto: sem caixa de entrada, sem confusão, sem anúncios. Apenas você e suas conversas. É a maneira mais rápida de conversar.',
     },
+    zh: {
+      role: '产品经理',
+      info: '第一个带有标签的消息传递应用程序。 简化的文本发送方式：没有收件箱，没有混乱，没有广告。 只有您和您的对话。 这是最快的聊天方式。',
+    }
   },
   {
     title: 'Tred',
@@ -169,6 +205,10 @@ const ProjectsData = [
       role: 'Designer de produto',
       info: 'Mercado online para comprar e vender carros usados. Venda o seu veículo usado em 3 semanas e ganhe 30% sobre o valor do revendedor.',
     },
+    zh: {
+      role: '产品设计师',
+      info: '在线市场买卖二手车。 在3周内出售您的二手车，并赚取超过经销商价值30％的收益。',
+    }
   },
   {
     title: 'Groundfloor',
@@ -186,6 +226,10 @@ const ProjectsData = [
       role: 'Co-fundador',
       info: 'A primeira comunidade de crowdfunding para imóveis. Apoie construtores independentes com empréstimos garantidos que pagam de 5 a 26% ao ano.',
     },
+    zh: {
+      role: '联合创始人',
+      info: '第一个房地产众筹社区。 支持有抵押贷款的独立建筑商，这些贷款每年支付5-26％。',
+    }
   },
   {
     title: 'Socialytics',
@@ -203,6 +247,10 @@ const ProjectsData = [
       role: 'Co-fundador',
       info: 'Análise de mídia social para profissionais de marketing digital. Informações sobre a eficácia do marketing em mídias sociais. Os clientes incluíram Intel, Crayola e DirecTV.',
     },
+    zh: {
+      role: '联合创始人',
+      info: '针对数字营销人员的社交媒体分析。 深入了解社交媒体营销效果。 客户包括英特尔，Crayola和DirecTV。',
+    }
   },
   {
     title: 'Data Validation',
@@ -220,6 +268,10 @@ const ProjectsData = [
       role: 'Designer de produto',
       info: 'Evite a caixa de spam. Limpe e mantenha sua lista de marketing por email para proteger sua reputação de remetente.',
     },
+    zh: {
+      role: '产品设计师',
+      info: '避开垃圾邮件箱。 清理并维护您的电子邮件营销列表，以维护电子邮件发件人的声誉。',
+    }
   },
 ]
 
