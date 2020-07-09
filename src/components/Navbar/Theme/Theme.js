@@ -6,7 +6,7 @@ import IconNight from './Icons/IconNight'
 const Theme = ({ theme, toggleTheme }) => (
   <div className="theme">
     <button
-      className="theme-toggle"
+      className="btn-plain theme-toggle"
       onClick={() => toggleTheme() }
       title="Toggle theme"
     >

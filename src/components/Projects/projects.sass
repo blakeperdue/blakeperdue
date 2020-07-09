@@ -1,4 +1,8 @@
 $projectBorderRadius: 10px
+$breakpoint-small: 540px // 540px
+$breakpoint-med: 768px // 720px
+$breakpoint-large: 960px // 960px
+
 
 .projects
   display: flex
@@ -6,23 +10,33 @@ $projectBorderRadius: 10px
   flex-wrap: wrap
   justify-content: center
   align-items: stretch
-  width: 1080px
+  max-width: 1080px
   margin: 1rem auto 4rem
+  padding: 0
+  list-style: none
 
 .project
   display: flex
-  flex-direction: column
-  justify-content: flex-start
-  align-items: flex-start
   width: calc((100% - 120px) / 2)
   height: 270px
   margin: 30px
-  background-color: $lightPlaceholder
+  padding: 0
+  background-color: $darkBg
   color: #fff
   text-decoration: none
   border-radius: $projectBorderRadius
   position: relative
   overflow: hidden
+
+.project-link
+  display: flex
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  height: 100%
+  position: relative
 
 .project-img
   top: 0
@@ -37,6 +51,7 @@ $projectBorderRadius: 10px
   background-size: cover
   z-index: 10
   border-radius: $projectBorderRadius
+  opacity: 0.85
 
 .dark .project
   background: $darkPlaceholder
@@ -110,5 +125,23 @@ $projectBorderRadius: 10px
     padding-top: 1rem
 
 
+@media only screen and (max-width: $breakpoint-med)
+  .project
+    height: 230px
+  .project-details
+    top: 55%
+  .project-info
+    display: none
+
+@media only screen and (max-width: $breakpoint-small)
+  .project
+    height: 200px
+    width: 80%
+
+  .project-details
+    top: 55%
+
+  .project-title
+    font-size: 1.35rem
 
 

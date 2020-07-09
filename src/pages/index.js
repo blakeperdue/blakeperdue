@@ -5,12 +5,16 @@ import Intro from 'components/Intro/Intro'
 import Projects from 'components/Projects/Projects'
 
 const HomePage = () => {
-  let savedTheme
+  let useTheme = Math.random() >= 0.5 ? 'dark' : 'light'
+  let useLanguage = 'en'
   if (typeof window !== 'undefined' && window.localStorage) {
-    savedTheme = window.localStorage.getItem('theme')
+    let tmp = window.localStorage.getItem('theme')
+    if (tmp !== null) useTheme = window.localStorage.getItem('theme')
+    tmp = window.localStorage.getItem('language')
+    if (tmp !== null) useLanguage = window.localStorage.getItem('language')
   }
-  const randomTheme = Math.random() >= 0.5 ? 'dark' : 'light'
-  const [theme, setTheme] = useState(savedTheme === null ? randomTheme : savedTheme)
+  const [theme, setTheme] = useState(useTheme)
+  const [language, setLanguage] = useState(useLanguage)
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
@@ -21,10 +25,15 @@ const HomePage = () => {
   }
 
   return (
-    <Layout toggleTheme={toggleTheme} theme={theme}>
-      <SEO theme={theme} />
-      <Intro theme={theme} />
-      <Projects theme={theme} />
+    <Layout
+      language={language}
+      setLanguage={setLanguage}
+      theme={theme}
+      toggleTheme={toggleTheme}
+    >
+      <SEO theme={theme} title="Blake Perdue – Product leader, designer and developer." />
+      <Intro language={language} />
+      <Projects language={language} theme={theme} />
     </Layout>
   )
 }
