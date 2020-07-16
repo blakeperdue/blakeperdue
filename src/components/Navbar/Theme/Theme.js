@@ -7,7 +7,7 @@ const Theme = ({ theme, toggleTheme }) => (
   <div className="theme">
     <button
       className="btn-plain theme-toggle"
-      onClick={() => toggleTheme() }
+      onClick={e => { e.currentTarget.blur(); toggleTheme() }}
       title="Toggle theme"
     >
       {theme === 'dark' && (

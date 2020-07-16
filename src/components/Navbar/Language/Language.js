@@ -35,7 +35,7 @@ const Language = ({ theme, language, setLanguage }) => {
     <div className="language">
       <button
         title={langStrings.change[language]}
-        className="btn-plain language-btn"
+        className={`btn-plain language-btn ${showMenu ? 'open' : 'close'}`}
         onClick={() => toggleMenu()}
       >
         <span className={`language-flag language-${language}`} />

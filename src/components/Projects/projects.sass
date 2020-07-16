@@ -21,12 +21,14 @@ $breakpoint-large: 960px // 960px
   height: 270px
   margin: 30px
   padding: 0
-  background-color: $darkBg
   color: #fff
   text-decoration: none
   border-radius: $projectBorderRadius
   position: relative
   overflow: hidden
+  // box-shadow: 0 0 6px rgba($darkBg, 0.1)
+  box-shadow: 0 0 0 1px rgba($darkBg, 0.1)
+
 
 .project-link
   display: flex
@@ -51,7 +53,6 @@ $breakpoint-large: 960px // 960px
   background-size: cover
   z-index: 10
   border-radius: $projectBorderRadius
-  opacity: 0.85
 
 .dark .project
   background: $darkPlaceholder
@@ -71,9 +72,10 @@ $breakpoint-large: 960px // 960px
 
 .project-overlay
   position: absolute
-  top: 0
-  bottom: 0
-  width: 100%
+  top: -1px
+  bottom: -1px
+  right: -1px
+  left: -1px
   z-index: 12
   background: rgba($accent, 0.94)
   opacity: 0
@@ -113,7 +115,8 @@ $breakpoint-large: 960px // 960px
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
 
 .project:hover,
-.project:active
+.project:active,
+.project-link:focus
   .project-overlay
     opacity: 1
 
@@ -128,6 +131,7 @@ $breakpoint-large: 960px // 960px
 @media only screen and (max-width: $breakpoint-med)
   .project
     height: 230px
+    margin: 30px 20px
   .project-details
     top: 55%
   .project-info
@@ -135,12 +139,10 @@ $breakpoint-large: 960px // 960px
 
 @media only screen and (max-width: $breakpoint-small)
   .project
-    height: 200px
-    width: 80%
-
+      width: 100%
+      height: 200px
   .project-details
     top: 55%
-
   .project-title
     font-size: 1.35rem
 

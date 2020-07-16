@@ -12,14 +12,21 @@
   flex-direction: row
   align-items: center
   background: none
-  svg > path
-    fill: $lightText
+  svg
+    transition: transform 0.3s ease
+    > path
+      transition: fill 0.2s linear
+      fill: $lightText
   &:hover,
   &:active,
+  &:focus,
   &.open
     color: $accent
     svg > path
       fill: $accent
+  &.open
+    svg
+      transform: rotate(180deg)
 
 .language-flag
   display: inline-block
@@ -72,7 +79,8 @@
   font-weight: 500
   color: $lightText
   &:hover,
-  &:active
+  &:active,
+  &:focus
     color: $accent
     background: $lightPlaceholder
 

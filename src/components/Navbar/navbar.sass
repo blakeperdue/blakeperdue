@@ -28,7 +28,10 @@
   text-align: center
   transition: all 0.2s linear
 
-  &:hover
+  &:hover,
+  &:active,
+  &:focus
+    outline: none
     border-color: $accent
     box-shadow: 0 0 0 2px $accent
 
@@ -51,7 +54,13 @@
   margin-right: 2rem
   color: $lightText
   cursor: pointer
-  &:hover
+  transition: color 0.2s linear
+  svg > path
+    transition: fill 0.2s linear
+  &:hover,
+  &:active,
+  &:focus
+    outline: none
     color: $accent
     svg > path
       fill: $accent

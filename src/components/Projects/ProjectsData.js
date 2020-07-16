@@ -85,7 +85,7 @@ const ProjectsData = [
   },
   {
     title: 'RatingFive (Sold)',
-    url: 'https://ratingfive.com',
+    url: 'https://web.archive.org/web/20180823065747/http://ratingfive.com/',
     img: 'ratingfive.png',
     en: {
       role: 'Founder',
@@ -147,8 +147,8 @@ const ProjectsData = [
     }
   },
   {
-    title: 'LoyaltyGrades (Acquired)',
-    url: 'https://loyaltygrades.com',
+    title: 'LoyaltyGrades (Sold)',
+    url: 'https://www.loyaltygrades.com/',
     img: 'lg.jpg',
     en: {
       role: 'Co-founder',
