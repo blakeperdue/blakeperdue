@@ -24,8 +24,7 @@ $breakpoint-large: 960px // 960px
   color: #fff
   text-decoration: none
   border-radius: $projectBorderRadius
-  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)
-  // 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+  transition: transform 0.5s $easeCurve, box-shadow 0.5s $easeCurve
   position: relative
   overflow: hidden
   // box-shadow: 0 0 6px rgba($darkBg, 0.1)
@@ -82,7 +81,7 @@ $breakpoint-large: 960px // 960px
   background: rgba($accent, 0.94)
   opacity: 0
   border-radius: $projectBorderRadius
-  transition: transform 0.8s cubic-bezier(.2,.8,.2,1)
+  transition: transform 0.8s $easeCurve
 
 .project-details
   position: absolute
@@ -94,32 +93,42 @@ $breakpoint-large: 960px // 960px
   padding: 1.5rem
   z-index: 30
   color: #fff
-  transition: all .3s ease
+  transition: all .3s $easeCurve
 
 .project-title
   margin: 0 0 0.3rem
   font-size: 1.65rem
-  letter-spacing: -0.04rem
+  letter-spacing: -0.06rem
   font-weight: 800
+
+.project-title i
+  font-weight: 400
+  font-size: 1.2rem
+  font-style: normal
 
 .project-role
   margin: 0
   font-size: 0.875rem
   letter-spacing: 0
-  font-weight: 200
+  font-weight: 400
   text-transform: uppercase
 
 .project-info
   opacity: 0
   font-size: 1rem
   padding-top: 3rem
-  transition: padding 0.5s ease
+  transition: padding 0.5s $easeCurve
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
 
 .project:hover,
 .project:active,
   transform: scale(1.06)
   box-shadow: 0 8px 16px rgba($darkBg, 0.35)
+  // box-shadow: 0 50px 100px -20px rgba(50,50,93,0.25),0 30px 60px -30px rgba(0,0,0,0.3), 0 50px 100px -20px rgba(50,50,93,0.25),0 30px 60px -30px rgba(0,0,0,0.3)
+
+.dark .project:hover,
+.dark .project:active
+  box-shadow: 0 8px 16px rgba($lightBg, 0.1)
 
 .project:hover,
 .project:active,
@@ -135,6 +144,7 @@ $breakpoint-large: 960px // 960px
     padding-top: 1rem
 
 
+
 @media only screen and (max-width: $breakpoint-med)
   .project
     height: 230px
@@ -147,7 +157,7 @@ $breakpoint-large: 960px // 960px
 @media only screen and (max-width: $breakpoint-small)
   .project
       width: 100%
-      height: 200px
+      height: 400px
   .project-details
     top: 55%
   .project-title

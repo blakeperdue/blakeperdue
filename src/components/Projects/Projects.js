@@ -5,7 +5,7 @@ import './projects.sass'
 const Projects = ({ language, theme }) => (
   <ul className="projects">
 
-    {ProjectsData.map(p => (
+    {ProjectsData.map((p, index) => (
       <li className="project" key={p.title}>
         <a
           className="project-link"
@@ -22,7 +22,7 @@ const Projects = ({ language, theme }) => (
           <div className="project-shade" />
           <div className="project-overlay" />
           <div className="project-details">
-            <h3 className="project-title">{p.title}</h3>
+            <h3 className="project-title" dangerouslySetInnerHTML={{ __html: p.title }} />
             <h4 className="project-role">{p[language].role}</h4>
             <p className="project-info">{p[language].info}</p>
           </div>

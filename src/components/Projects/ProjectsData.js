@@ -84,7 +84,7 @@ const ProjectsData = [
     }
   },
   {
-    title: 'RatingFive (Sold)',
+    title: 'RatingFive <i>(Sold)</i>',
     url: 'https://web.archive.org/web/20180823065747/http://ratingfive.com/',
     img: 'ratingfive.png',
     en: {
@@ -126,7 +126,7 @@ const ProjectsData = [
     }
   },
   {
-    title: 'SnapSuggest (Sold)',
+    title: 'SnapSuggest <i>(Sold)</i>',
     url: 'https://snapsuggest.com',
     img: 'snapsuggest.jpg',
     en: {
@@ -147,7 +147,7 @@ const ProjectsData = [
     }
   },
   {
-    title: 'LoyaltyGrades (Sold)',
+    title: 'LoyaltyGrades <i>(Sold) </i>',
     url: 'https://www.loyaltygrades.com/',
     img: 'lg.jpg',
     en: {
@@ -168,7 +168,7 @@ const ProjectsData = [
     }
   },
   {
-    title: 'Hello (Acquired by Uber)',
+    title: 'Hello <i>(Acquired by Uber)</i>',
     url: 'https://web.archive.org/web/20150906003830/https://play.google.com/store/apps/details?id=com.hellotext.hello',
     img: 'hellosms.jpg',
     en: {

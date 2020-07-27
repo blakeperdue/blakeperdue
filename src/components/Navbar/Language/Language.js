@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './language.sass'
 import colors from 'styles/colors'
 
+// list of supported languages
 const languages = [
   { name: 'English', code: 'en' },
   { name: 'Español', code: 'es' },
@@ -9,6 +10,7 @@ const languages = [
   { name: '中文简体', code: 'zh' },
 ]
 
+// store a list of all the lang strings needed for this component
 const langStrings = {
   close: { en: 'Close Menu', es: 'Cerrar menú', pt: 'Fechar menu', zh: '关闭选单' },
   change: { en: 'Change language', es: 'Cambiar idioma', pt: 'Mudar idioma', zh: '改变语言' },
