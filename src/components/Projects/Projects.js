@@ -13,7 +13,7 @@ const Projects = ({ language, theme }) => (
           key={p.title}
           rel="noreferrer"
           target="_blank"
-          title={p.title}
+          title={p.title.replace(/(<([^>]+)>)/gi, '')}
         >
           <div
             className="project-img"
