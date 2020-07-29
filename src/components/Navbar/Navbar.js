@@ -13,7 +13,7 @@ const Navbar = ({ theme, toggleTheme, language, setLanguage }) => (
         </div>
         <div className="col-6-sm">
           <div className="navbar-options">
-            <Theme theme={theme} toggleTheme={toggleTheme} />
+            <Theme language={language} theme={theme} toggleTheme={toggleTheme} />
             <Language language={language} setLanguage={setLanguage} theme={theme} />
           </div>
         </div>
