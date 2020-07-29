@@ -1,13 +1,28 @@
+$navbarHeight: 56px
+$socialLinkHeight: 32px
+
 .navbar
   display: flex
   align-items: center
-  height: 56px
+  height: $navbarHeight
   background: $lightBg
 
 .dark .navbar
   background: $darkBg
 
+.social-links,
+.social-link,
+.navbar-options,
+.theme
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-end
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+
 .social-links
+  height: $navbarHeight
+  justify-content: flex-start
 
 .dark .social-link
   border-color: rgba($darkText, 0.25)
@@ -19,30 +34,27 @@
     fill: $lightText
 
 .social-link
-  display: inline-block
+  justify-content: center
+  align-items: center
   margin-right: 10px
-  width: 32px
-  height: 32px
+  width: $socialLinkHeight
+  height: $socialLinkHeight
   border: solid 1px rgba($lightText,0.25)
-  border-radius: 16px
-  text-align: center
-  transition: all 0.2s linear
+  border-radius: $socialLinkHeight / 2
+  transition: all 0.3s $easeCurve
 
   &:hover,
-  &:active,
+  // &:active,
   &:focus
     outline: none
     border-color: $accent
-    box-shadow: 0 0 0 2px $accent
+    transform: scale(1.2)
+    background: $accent
+    svg > path
+      fill: $darkText
 
-.navbar-options,
-.theme
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: flex-end
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
-
+.navbar-options
+  height: $navbarHeight
 
 
 .dark .theme-toggle

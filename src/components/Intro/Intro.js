@@ -6,7 +6,7 @@ const bio = {
   en: {
     headshot: 'Blake Perdue having fun with his son.',
     h1: 'Hi there, I\'m',
-    h2: 'I like to create things. This is a collection of some  of my recent projects.',
+    h2: 'I like to create things.&nbsp; This is a collection of some  of my recent projects.',
   },
   es: {
     headshot: 'Blake Perdue se divierte con su hijo.',
@@ -40,7 +40,7 @@ const Intro = ({ language }) => {
             />
           </div>
           <h1 className="h1 center">{text.h1}&nbsp;<strong className="h1-bold">Blake Perdue</strong>.</h1>
-          <h2 className="h2 center">{text.h2}</h2>
+          <h2 className="h2 center" dangerouslySetInnerHTML={{ __html: text.h2 }} />
         </div>
       </div>
     </div>
