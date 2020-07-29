@@ -27,13 +27,14 @@ function SEO({ theme, description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title || 'Blake Perdue – Product leader, designer and developer'
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={metaTitle}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       icon={favicon}
       meta={[

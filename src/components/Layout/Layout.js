@@ -5,6 +5,7 @@ import './grid.sass'
 
 const Layout = ({ children, theme, toggleTheme, language, setLanguage }) => (
   <div className="layout">
+    <a href="#main" className="skipToMain">Skip to main content</a>
     <Navbar
       theme={theme}
       toggleTheme={toggleTheme}
