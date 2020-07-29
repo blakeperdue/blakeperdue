@@ -31,7 +31,7 @@ const HomePage = () => {
       theme={theme}
       toggleTheme={toggleTheme}
     >
-      <SEO theme={theme} title="Blake Perdue – Product leader, designer and developer." />
+      <SEO theme={theme} title="Blake Perdue – Product leader, designer and developer." lang={language} />
       <Intro language={language} />
       <Projects language={language} theme={theme} />
     </Layout>
