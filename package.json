@@ -33,6 +33,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "go": "gatsby build && yarn deploy",
     "deploy": "rsync -av /x/blakeperdue/public/* root@bp:/sites/blakeperdue.com/",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
