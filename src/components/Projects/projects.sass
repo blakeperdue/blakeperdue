@@ -49,11 +49,14 @@ $breakpoint-large: 960px // 960px
   width: 100%
   height: 100%
   position: absolute
-  background-position: center center
-  background-repeat: no-repeat
-  background-size: cover
   z-index: 10
   border-radius: $projectBorderRadius
+  overflow: hidden
+
+.project-picture img
+  width: 100%
+  height: 100%
+  object-fit: cover
 
 .dark .project
   background: $darkPlaceholder

@@ -15,10 +15,13 @@ const Projects = ({ language, theme }) => (
           target="_blank"
           title={p.title.replace(/(<([^>]+)>)/gi, '').replace('&nbsp;', '')}
         >
-          <div
-            className="project-img"
-            style={{ backgroundImage: `url(/projects/${p.img})`}}
-          />
+          <div className="project-img">
+            <picture className="project-picture">
+              <source type="image/webp" srcSet={`/projects/${p.img.replace('.jpg', '.webp').replace('.png', '.webp')}`} />
+              <source type="image/jpeg" srcSet={`/projects/${p.img}`} />
+              <img src={`/projects/${p.img}`} alt={p.title} />
+            </picture>
+          </div>
           <div className="project-shade" />
           <div className="project-overlay" />
           <div className="project-details">
