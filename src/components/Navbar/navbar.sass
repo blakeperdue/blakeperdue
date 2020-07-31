@@ -18,14 +18,15 @@ $socialLinkHeight: 32px
   flex-direction: row
   align-items: center
   justify-content: flex-end
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
 
 .social-links
   height: $navbarHeight
   justify-content: flex-start
 
 .dark .social-link
-  border-color: rgba($darkText, 0.25)
+  border-color: lighten($darkPlaceholder, 6%)
+  // background: $darkPlaceholder
   svg > path
     fill: $darkText
 
@@ -39,7 +40,8 @@ $socialLinkHeight: 32px
   margin-right: 10px
   width: $socialLinkHeight
   height: $socialLinkHeight
-  border: solid 1px rgba($lightText,0.25)
+  // background: $lightPlaceholder
+  border: solid 1px darken($lightPlaceholder, 6%)
   border-radius: $socialLinkHeight / 2
   transition: all 0.3s $easeCurve
 
@@ -69,6 +71,7 @@ $socialLinkHeight: 32px
   color: $lightText
   cursor: pointer
   transition: color 0.2s linear
+  font-weight: 500
   svg > path
     transition: fill 0.2s linear
   &:hover,
