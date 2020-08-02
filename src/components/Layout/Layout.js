@@ -1,5 +1,6 @@
 import React from "react"
 import Navbar from 'components/Navbar/Navbar'
+import './fonts.sass'
 import './layout.sass'
 import './grid.sass'
 
