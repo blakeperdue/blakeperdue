@@ -3,6 +3,7 @@ import Layout from 'components/Layout/Layout'
 import SEO from 'components/SEO/SEO'
 import Intro from 'components/Intro/Intro'
 import Projects from 'components/Projects/Projects'
+import ConsoleByline from 'components/ConsoleByline/ConsoleByline'
 
 const HomePage = () => {
   let useTheme = Math.random() >= 0.5 ? 'dark' : 'light'
@@ -34,6 +35,7 @@ const HomePage = () => {
       <SEO theme={theme} lang={language} />
       <Intro language={language} />
       <Projects language={language} theme={theme} />
+      <ConsoleByline />
     </Layout>
   )
 }
