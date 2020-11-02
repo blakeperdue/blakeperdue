@@ -2,7 +2,7 @@ const ProjectsData = [
   {
     title: 'TypeForce',
     url: 'https://www.typeforce.app',
-    img: 'typeforce.png',
+    img: 'typeforce2.png',
     en: {
       role: 'Creator',
       info: 'A service that helps type foundries protect and secure their font files, while still allowing customers the ability to try before they buy.',
@@ -107,7 +107,7 @@ const ProjectsData = [
   {
     title: 'First.io',
     url: 'https://first.io',
-    img: 'first.png',
+    img: 'first2.jpg',
     en: {
       role: 'Advisor',
       info: 'Predictive analytics and machine learning to help real estate agents discover who in their network will soon buy or sell.',
