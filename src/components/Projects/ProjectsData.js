@@ -65,7 +65,7 @@ const ProjectsData = [
   {
     title: 'Bookshelf',
     url: 'https://get.vitalsource.com',
-    img: 'bookshelf2.jpg',
+    img: 'vitalsource-card.png',
     en: {
       role: 'Sr. Product Manager',
       info: 'The most used textbook reader in higher education with apps on iOS, Android, Mac, Windows, Chromebook and Kindle.',
@@ -105,7 +105,7 @@ const ProjectsData = [
     }
   },
   {
-    title: 'First.io',
+    title: 'First.io &nbsp;<i>(Acquired)</i>',
     url: 'https://first.io',
     img: 'first2.jpg',
     en: {
