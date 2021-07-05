@@ -69,7 +69,8 @@ $breakpoint-large: 960px // 960px
   bottom: 0
   height: 100px
   z-index: 11
-  background-image: linear-gradient(rgba($darkBg,0), rgba($darkBg,0.75))
+  background-image: linear-gradient(rgba($darkBg,0), rgba($darkBg,0.25))
+  // background-image: linear-gradient(180deg, transparent, $accent)
   background-repeat: repeat-x
   border-radius: 0 0 $projectBorderRadius $projectBorderRadius
   transition: all 0.2s linear
@@ -103,6 +104,7 @@ $breakpoint-large: 960px // 960px
   font-size: 1.65rem
   letter-spacing: -0.2px
   font-weight: 800
+  // mix-blend-mode: exclusion
 
 .project-title i
   font-weight: 200

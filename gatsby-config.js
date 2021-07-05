@@ -5,7 +5,7 @@ module.exports = {
     title: 'Blake Perdue – Product leader, designer and developer',
     description: 'I like to create things. This is a collection of some  of my recent projects.',
     author: '@blakeperdue',
-    siteUrl: 'https://blakeperdue.com'
+    siteUrl: 'https://www.blakeperdue.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

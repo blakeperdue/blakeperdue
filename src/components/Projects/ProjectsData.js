@@ -65,7 +65,7 @@ const ProjectsData = [
   {
     title: 'Bookshelf',
     url: 'https://get.vitalsource.com',
-    img: 'vitalsource-card.png',
+    img: 'vitalsource.png',
     en: {
       role: 'Sr. Product Manager',
       info: 'The most used textbook reader in higher education with apps on iOS, Android, Mac, Windows, Chromebook and Kindle.',
