@@ -63,6 +63,27 @@ const ProjectsData = [
     }
   },
   {
+    title: 'Enthusist',
+    url: 'https://www.enthusist.com',
+    img: 'enthusist.png',
+    en: {
+      role: 'Creator',
+      info: 'Software ratings sites are increasingly important in SaaS purchase decisions. Enthusist aggregates reviews and boosts ratings by asking real customers to rate a product.',
+    },
+    es: {
+      role: 'Creadora',
+      info: 'Los sitios de calificación de software son cada vez más importantes en las decisiones de compra de SaaS. Enthusist agrega reseñas y aumenta las calificaciones al incitar a los clientes reales a calificar un producto.',
+    },
+    pt: {
+      role: 'Criador',
+      info: 'Os sites de classificação de software são cada vez mais importantes nas decisões de compra de SaaS. O Enthusist agrega comentários e aumenta as avaliações, solicitando que clientes reais avaliem um produto.',
+    },
+    zh: {
+      role: '创作者',
+      info: '软件评级网站在 SaaS 购买决策中变得越来越重要。 Enthusist 通过提示真实客户对产品进行评分来汇总评论并提高评分。',
+    }
+  },
+  {
     title: 'Bookshelf',
     url: 'https://get.vitalsource.com',
     img: 'vitalsource.png',
