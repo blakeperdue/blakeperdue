@@ -25,7 +25,7 @@ const ProjectsData = [
     url: 'https://acrobatiq.us',
     img: 'acro.jpg',
     en: {
-      role: 'Product Lead',
+      role: 'Director Product',
       info: 'Acrobatiq is a learning-science based, course creation and delivery platform that optimizes teaching, learning, and the course creation process.',
     },
     es: {

@@ -53,6 +53,7 @@ $breakpoint-large: 960px // 960px
   border-radius: $projectBorderRadius
   overflow: hidden
 
+
 .project-picture img
   width: 100%
   height: 100%
@@ -69,7 +70,7 @@ $breakpoint-large: 960px // 960px
   bottom: 0
   height: 100px
   z-index: 11
-  background-image: linear-gradient(rgba($darkBg,0), rgba($darkBg,0.7))
+  background-image: linear-gradient(rgba($darkBg,0), rgba($darkBg,0.35))
   // background-image: linear-gradient(180deg, transparent, $accent)
   background-repeat: repeat-x
   border-radius: 0 0 $projectBorderRadius $projectBorderRadius
@@ -104,7 +105,7 @@ $breakpoint-large: 960px // 960px
   font-size: 1.65rem
   letter-spacing: -0.2px
   font-weight: 800
-  // mix-blend-mode: exclusion
+  text-shadow: 1px 1px 2px rgba($darkBg, 0.45)
 
 .project-title i
   font-weight: 200
@@ -127,7 +128,6 @@ $breakpoint-large: 960px // 960px
   letter-spacing: 0
   line-height: 1.4
   transition: padding 0.5s $easeCurve
-  font-feature-settings: 'ss08', 'ss15', "kern", "liga", "clig", "calt"
 
 
 .project:hover,
@@ -148,6 +148,9 @@ $breakpoint-large: 960px // 960px
 
   .project-details
     top: 0
+
+  .project-title
+    text-shadow: none
 
   .project-info
     opacity: 1
