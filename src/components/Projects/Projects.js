@@ -1,12 +1,39 @@
 import React from 'react'
+import { m } from 'framer-motion'
 import ProjectsData from './ProjectsData'
 import './projects.sass'
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const item = {
+  hidden: { opacity: 0, y: 50, scale: 0.9 },
+  show: { opacity: 1, y: 0, scale: 1 }
+}
+
 const Projects = ({ language, theme }) => (
-  <ul className="projects">
+  <m.ul
+    className="projects"
+    initial="hidden"
+    animate="show"
+    variants={container}
+    >
 
     {ProjectsData.map((p, index) => (
-      <li className="project" key={p.title}>
+      <m.li
+        className="project"
+        key={p.title}
+        variants={item}
+        // whileHover={{ scale: 1.1 }}
+        // whileTap={{ scale: 0.95 }}s
+        >
         <a
           className="project-link"
           href={p.url}
@@ -30,10 +57,10 @@ const Projects = ({ language, theme }) => (
             <p className="project-info">{p[language].info}</p>
           </div>
         </a>
-      </li>
+      </m.li>
     ))}
 
-  </ul>
+  </m.ul>
 )
 
 export default Projects

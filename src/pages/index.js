@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { LazyMotion, domAnimation } from 'framer-motion'
 import Layout from 'components/Layout/Layout'
 import SEO from 'components/SEO/SEO'
 import Intro from 'components/Intro/Intro'
@@ -26,17 +27,19 @@ const HomePage = () => {
   }
 
   return (
-    <Layout
-      language={language}
-      setLanguage={setLanguage}
-      theme={theme}
-      toggleTheme={toggleTheme}
-    >
-      <SEO theme={theme} lang={language} />
-      <Intro language={language} />
-      <Projects language={language} theme={theme} />
-      <ConsoleByline />
-    </Layout>
+    <LazyMotion features={domAnimation}>
+      <Layout
+        language={language}
+        setLanguage={setLanguage}
+        theme={theme}
+        toggleTheme={toggleTheme}
+      >
+        <SEO theme={theme} lang={language} />
+        <Intro language={language} />
+        <Projects language={language} theme={theme} />
+        <ConsoleByline />
+      </Layout>
+    </LazyMotion>
   )
 }
 
