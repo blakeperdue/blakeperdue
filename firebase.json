@@ -8,10 +8,6 @@
       "**/node_modules/**"
     ],
     "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ],
     "headers": [
       {
@@ -32,7 +28,7 @@
           },
           {
             "key": "Cache-Control",
-            "value": "max-age=172800s"
+            "value": "max-age=172800"
           }
         ]
       },
@@ -41,7 +37,7 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=300"
+            "value": "max-age=172800"
           }
         ]
       }

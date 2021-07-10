@@ -2,7 +2,7 @@ $projectBorderRadius: 10px
 $breakpoint-small: 540px // 540px
 $breakpoint-med: 768px // 720px
 $breakpoint-large: 960px // 960px
-
+$projectHeight: 300px
 
 .projects
   display: flex
@@ -10,7 +10,7 @@ $breakpoint-large: 960px // 960px
   flex-wrap: wrap
   justify-content: center
   align-items: stretch
-  max-width: 1080px
+  max-width: 1200px
   margin: 2rem auto 6rem
   padding: 0
   list-style: none
@@ -18,7 +18,7 @@ $breakpoint-large: 960px // 960px
 .project
   display: flex
   width: calc((100% - 120px) / 2)
-  height: 270px
+  height: $projectHeight
   margin: 30px
   padding: 0
   color: #fff
@@ -102,20 +102,20 @@ $breakpoint-large: 960px // 960px
 
 .project-title
   margin: 0 0 0.3rem
-  font-size: 1.65rem
+  font-size: 2rem
   letter-spacing: -0.2px
   font-weight: 800
   text-shadow: 1px 1px 2px rgba($darkBg, 0.45)
 
 .project-title i
   font-weight: 200
-  font-size: 1.2rem
+  font-size: 1.5rem
   font-style: normal
   letter-spacing: -0.2px
 
 .project-role
   margin: 0
-  font-size: 0.875rem
+  font-size: 1rem
   letter-spacing: -0.15px
   font-weight: 200
   text-transform: uppercase
@@ -123,11 +123,11 @@ $breakpoint-large: 960px // 960px
 .project-info
   opacity: 0
   padding-top: 3rem
-  font-size: 1rem
+  font-size: 1.125rem
   font-weight: 500
   letter-spacing: 0
   line-height: 1.4
-  transition: padding 0.5s $easeCurve
+  // transition: padding 0.5s $easeCurve
 
 
 .project:hover,

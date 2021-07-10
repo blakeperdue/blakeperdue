@@ -9,10 +9,8 @@ const HomePage = () => {
   let useTheme = Math.random() >= 0.5 ? 'dark' : 'light'
   let useLanguage = 'en'
   if (typeof window !== 'undefined' && window.localStorage) {
-    let tmp = window.localStorage.getItem('theme')
-    if (tmp !== null) useTheme = window.localStorage.getItem('theme')
-    tmp = window.localStorage.getItem('language')
-    if (tmp !== null) useLanguage = window.localStorage.getItem('language')
+    useTheme = window.localStorage.getItem('theme') || useTheme
+    useLanguage = window.localStorage.getItem('language') || useLanguage
   }
   const [theme, setTheme] = useState(useTheme)
   const [language, setLanguage] = useState(useLanguage)
