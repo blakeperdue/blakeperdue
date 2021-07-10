@@ -28,14 +28,15 @@ function SEO({ theme, description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || 'Blake Perdue – Product leader, designer and developer'
-
+console.log(metaTitle)
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={metaTitle}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s`}
+      description={metaDescription}
       icon={favicon}
       meta={[
         {
@@ -44,7 +45,7 @@ function SEO({ theme, description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -64,7 +65,7 @@ function SEO({ theme, description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,

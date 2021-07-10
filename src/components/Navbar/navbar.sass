@@ -10,6 +10,9 @@ $socialLinkHeight: 32px
 .dark .navbar
   background: $darkBg
 
+.fire .navbar
+  background: $fireBg
+
 .social-links,
 .social-link,
 .navbar-options,
@@ -33,6 +36,11 @@ $socialLinkHeight: 32px
 .light .social-link
   svg > path
     fill: $lightText
+
+.fire .social-link
+  border-color: lighten($firePlaceholder, 6%)
+  svg > path
+    fill: $fireText
 
 .social-link
   justify-content: center
@@ -71,7 +79,7 @@ $socialLinkHeight: 32px
   color: $lightText
   cursor: pointer
   transition: color 0.2s linear
-  font-weight: 500
+  font-weight: 400
   svg > path
     transition: fill 0.2s linear
   &:hover,

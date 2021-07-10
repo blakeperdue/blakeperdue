@@ -10,10 +10,13 @@ $headshot: 200px
   box-shadow: 0 0 0 4px $accent, 0 0 0 14px #F2F4F9
   margin-bottom: 1.75rem
   border-radius: 50%
-  transition: box-shadow 0.2s $easeCurve
+  // transition: box-shadow 0.4s $easeCurve
 
 .dark .headshot-img
   box-shadow: 0 0 0 4px $accent, 0 0 0 14px #0D243A
+
+.fire .headshot-img
+  box-shadow: 0 0 0 4px $fireText, 0 0 0 14px $firePlaceholder
 
 .h1
   font-weight: 200
@@ -23,6 +26,9 @@ $headshot: 200px
 .h1-bold
   font-weight: 800
   color: $accent
+
+.fire .h1-bold
+  color: $darkBg
 
 .h2
   font-weight: 200
