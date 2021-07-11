@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import favicon from 'images/favicon.ico'
 
-function SEO({ theme, description, lang, meta, title }) {
+function SEO({ theme, description, language, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -32,7 +32,7 @@ console.log(metaTitle)
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        language,
       }}
       title={metaTitle}
       titleTemplate={`%s`}
@@ -79,14 +79,14 @@ console.log(metaTitle)
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  language: `en`,
   meta: [],
   description: ``,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
+  language: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string
 }

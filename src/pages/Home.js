@@ -34,7 +34,7 @@ const Home = () => {
       theme={theme}
       toggleTheme={toggleTheme}
     >
-      <SEO theme={theme} lang={language} />
+      <SEO theme={theme} language={language} />
       <Intro language={language} />
       <Projects language={language} theme={theme} />
       <ConsoleByline />
