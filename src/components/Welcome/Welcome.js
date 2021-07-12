@@ -1,6 +1,5 @@
-// import React, { useState } from 'react'
 import React from 'react'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import BioText from 'components/Intro/BioText'
 import './welcome.sass'
 
@@ -15,7 +14,7 @@ const variants = {
     transition: {
       repeat: 1,
       repeatType: 'reverse',
-      repeatDelay: 1,
+      repeatDelay: 1.5,
       ease: [0.76, 0, 0.24, 1],
       duration: 1
     }
@@ -26,21 +25,32 @@ const variants = {
   }
 }
 
-const Welcome = ({ language }) => {
-  // const [welcome, setWelcome] = useState('showWelcome')
+const variants2 = {
+  visible: {
+    opacity: 1
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      delay: 2.8
+    }
+  }
+}
 
+const Welcome = ({ language }) => {
   return (
     <>
-      <motion.div
+      <m.div
         className="welcome-bg"
         initial="hidden"
         animate="showWelcome"
         variants={variants}
       />
-      <h1 className="welcome-h1 h1 center">
+      <m.h1 className="welcome-h1 h1 center" initial="visible" animate="hidden" variants={variants2}>
         {BioText[language].h1}&nbsp;
         <strong className="h1-bold">Blake Perdue</strong>.
-      </h1>
+      </m.h1>
     </>
   )
 }

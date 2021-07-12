@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-// import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { LazyMotion, domAnimation } from 'framer-motion'
 import SEO from 'components/SEO/SEO'
 import Layout from 'components/Layout/Layout'
 import BackgroundPattern from 'components/Layout/BackgroundPattern'
@@ -8,19 +8,8 @@ import Intro from 'components/Intro/Intro'
 import Projects from 'components/Projects/Projects'
 import ConsoleByline from 'components/ConsoleByline/ConsoleByline'
 
-// const variants = {
-//   hidden: { },
-//   showWelcome: { transition: { duration: 1 }}
-// }
-
-// const variantsLayout = {
-//   hidden: { opacity: 0 },
-//   showWelcome: { opacity: 1}
-// }
-const themes = ['light', 'dark', 'fire']
-
 const Home = () => {
-  let useTheme = themes.sort(() => .5 - Math.random()).slice(0, 1)[0]
+  let useTheme = 'light'
   let useLanguage = 'en'
 
   if (typeof window !== 'undefined' && window.localStorage) {
@@ -29,7 +18,7 @@ const Home = () => {
   }
   const [theme, setTheme] = useState(useTheme)
   const [language, setLanguage] = useState(useLanguage)
-  // const [welcome, setWelcome] = useState('hidden')
+  const [showWelcome, setShowWelcome] = useState(true)
 
   const toggleTheme = () => {
     let newTheme
@@ -42,9 +31,28 @@ const Home = () => {
     }
   }
 
+  useEffect(
+    () => {
+      let timer1 = setTimeout(() => setShowWelcome(false), 1300);
+
+      // this will clear Timeout
+      // when component unmount like in willComponentUnmount
+      // and show will not change to true
+      return () => {
+        clearTimeout(timer1);
+      };
+    },
+    // useEffect will run only one time with empty []
+    // if you pass a value to array,
+    // like this - [data]
+    // than clearTimeout will run every time
+    // this value changes (useEffect re-run)
+    []
+  );
+
   return (
-    <>
-      {/* <Welcome language={language} /> */}
+    <LazyMotion features={domAnimation}>
+      <Welcome language={language} />
       <Layout
         language={language}
         setLanguage={setLanguage}
@@ -53,12 +61,12 @@ const Home = () => {
       >
         <SEO theme={theme} language={language} />
         <BackgroundPattern theme={theme} />
-        {/* <div style={{ background: '#fff', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100vh', zIndex: 99 }} /> */}
+        {showWelcome && <div style={{ background: '#fff', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100vh', zIndex: 99 }} />}
         <Intro language={language} />
         <Projects language={language} theme={theme} />
         <ConsoleByline />
       </Layout>
-    </>
+    </LazyMotion>
   )
 }
 

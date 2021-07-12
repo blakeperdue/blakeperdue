@@ -32,7 +32,7 @@ console.log(metaTitle)
   return (
     <Helmet
       htmlAttributes={{
-        language,
+        lang: language,
       }}
       title={metaTitle}
       titleTemplate={`%s`}
