@@ -1,6 +1,7 @@
 import React from 'react'
 import IconDay from './Icons/IconDay'
 import IconNight from './Icons/IconNight'
+import IconFire from './Icons/IconFire'
 
 
 const themeLabels = {
@@ -24,7 +25,7 @@ const Theme = ({ language, theme, toggleTheme }) => (
         <span className="theme-current"><IconDay />&nbsp; Day</span>
       )}
       {theme === 'fire' && (
-        <span className="theme-current"><IconNight />&nbsp; Fire</span>
+        <span className="theme-current"><IconFire />&nbsp; Fire</span>
       )}
     </button>
   </div>

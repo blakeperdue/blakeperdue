@@ -7,6 +7,17 @@
   svg > path
     fill: $darkText
 
+.fire .language-btn
+  svg > path
+    fill: $fireText
+  &:hover,
+  &:active,
+  &:focus,
+  &.open
+    color: $fireShadow
+    svg > path
+      fill: $fireShadow
+
 .language-btn
   display: flex
   flex-direction: row
@@ -27,6 +38,8 @@
   &.open
     svg
       transform: rotate(180deg)
+
+
 
 .language-flag
   display: inline-block

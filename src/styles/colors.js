@@ -7,7 +7,12 @@ const colors = {
   dark: {
     bg: '#0C1D2C',
     text: '#fff',
-    waves: '#24386E',
+    waves: '#0D243A',
+  },
+  fire: {
+    bg: '#FA004B',
+    text: '#fff',
+    waves: '#ED0047'
   },
   accent:   '#FA004B',
   text:     '#434E63',
