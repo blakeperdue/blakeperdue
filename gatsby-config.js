@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Blake Perdue – Product leader, designer and developer',
-    description: 'I like to create things. This is a collection of some  of my recent projects.',
+    description: 'I like to create things. This is a collection of some of my recent projects.',
     author: '@blakeperdue',
     siteUrl: 'https://www.blakeperdue.com'
   },

@@ -5,7 +5,7 @@ const ProjectsData = [
     img: 'typeforce2.png',
     en: {
       role: 'Creator',
-      info: 'A service that helps type foundries protect and secure their font files, while still allowing customers the ability to try before they buy.',
+      info: 'Everyday thousands of fonts are illegally shared. TypeForce stops font piracy by securely showcase foundry typefaces, allowing visitors to fully test drive a font before purchase.',
     },
     es: {
       role: 'Creador',

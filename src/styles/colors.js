@@ -14,6 +14,11 @@ const colors = {
     text: '#fff',
     waves: '#ED0047'
   },
+  ocean: {
+    bg: '#0143CD',
+    text: '#fff',
+    waves: '#0149CE'
+  },
   accent:   '#FA004B',
   text:     '#434E63',
   border:   '#DCDEE2',

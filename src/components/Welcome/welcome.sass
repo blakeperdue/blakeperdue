@@ -4,7 +4,7 @@ body.welcome
 
 .welcome-bg,
 .welcome-h1
-  position: fixed
+  position: absolute
   top: 0
   left: 0
   right: 0
@@ -13,8 +13,10 @@ body.welcome
   height: 0
 
 .welcome-bg
+  position: fixed
   background: $accent
   z-index: 100
+  box-shadow: 0 5px 10px rgbaA($fireShadow, 0.5)s
 
 .welcome-h1
   top: calc(256px + 6.25rem)
@@ -22,3 +24,5 @@ body.welcome
   color: #fff
   .h1-bold
     color: #fff
+.fire .welcome-h1 .h1-bold
+  color: #fff

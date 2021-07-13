@@ -12,42 +12,46 @@ const variants = {
     translateY: 0,
     height: '100vh',
     transition: {
-      repeat: 1,
-      repeatType: 'reverse',
-      repeatDelay: 1.5,
-      ease: [0.76, 0, 0.24, 1],
+      // repeat: 1,
+      // repeatType: 'reverse',
+      // repeatDelay: 1.5,
+      ease: [0.87, 0, 0.13, 1],
       duration: 1
     }
   },
   hideWelcome: {
     height: 0,
-    transition: { ease: [0.76, 0, 0.24, 1], duration: 1 }
-  }
-}
-
-const variants2 = {
-  visible: {
-    opacity: 1
-  },
-  hidden: {
-    opacity: 0,
+    translateY: 0,
     transition: {
-      duration: 0.2,
-      delay: 2.8
+      ease: [0.87, 0, 0.13, 1],
+      duration: 1
     }
   }
 }
 
-const Welcome = ({ language }) => {
+const variants2 = {
+  showWelcome: {
+    opacity: 1
+  },
+  hideWelcome: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+      delay: 0.25
+    }
+  }
+}
+
+const Welcome = ({ language, show }) => {
   return (
     <>
       <m.div
         className="welcome-bg"
         initial="hidden"
-        animate="showWelcome"
+        animate={show}
         variants={variants}
       />
-      <m.h1 className="welcome-h1 h1 center" initial="visible" animate="hidden" variants={variants2}>
+      <m.h1 className="welcome-h1 h1 center" initial="showWelcome" animate={show} variants={variants2}>
         {BioText[language].h1}&nbsp;
         <strong className="h1-bold">Blake Perdue</strong>.
       </m.h1>

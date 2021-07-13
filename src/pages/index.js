@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { LazyMotion, domAnimation } from 'framer-motion'
-import SEO from 'components/SEO/SEO'
 import Layout from 'components/Layout/Layout'
 import BackgroundPattern from 'components/Layout/BackgroundPattern'
 import Welcome from 'components/Welcome/Welcome'
 import Intro from 'components/Intro/Intro'
 import Projects from 'components/Projects/Projects'
-import ConsoleByline from 'components/ConsoleByline/ConsoleByline'
 
 const Home = () => {
-  let useTheme = 'light'
+  let useTheme = Math.random() < 0.5 ? 'light' : 'dark'
   let useLanguage = 'en'
 
   if (typeof window !== 'undefined' && window.localStorage) {
@@ -18,7 +16,7 @@ const Home = () => {
   }
   const [theme, setTheme] = useState(useTheme)
   const [language, setLanguage] = useState(useLanguage)
-  const [showWelcome, setShowWelcome] = useState(true)
+  const [showWelcome, setShowWelcome] = useState('showWelcome')
 
   const toggleTheme = () => {
     let newTheme
@@ -33,7 +31,7 @@ const Home = () => {
 
   useEffect(
     () => {
-      let timer1 = setTimeout(() => setShowWelcome(false), 1300);
+      let timer1 = setTimeout(() => setShowWelcome('hideWelcome'), 2000);
 
       // this will clear Timeout
       // when component unmount like in willComponentUnmount
@@ -51,20 +49,18 @@ const Home = () => {
   );
 
   return (
-    <LazyMotion features={domAnimation}>
-      <Welcome language={language} />
+    <LazyMotion features={domAnimation} strict>
+      <Welcome language={language} show={showWelcome} />
       <Layout
         language={language}
         setLanguage={setLanguage}
         theme={theme}
         toggleTheme={toggleTheme}
       >
-        <SEO theme={theme} language={language} />
         <BackgroundPattern theme={theme} />
-        {showWelcome && <div style={{ background: '#fff', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100vh', zIndex: 99 }} />}
+        {showWelcome !== 'hideWelcome' && <div style={{ background: '#fff', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100vh', zIndex: 99 }} />}
         <Intro language={language} />
         <Projects language={language} theme={theme} />
-        <ConsoleByline />
       </Layout>
     </LazyMotion>
   )
