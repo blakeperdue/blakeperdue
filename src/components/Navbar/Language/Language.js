@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import './language.sass'
 import colors from 'styles/colors'
 
@@ -74,4 +74,4 @@ const Language = ({ theme, language, setLanguage }) => {
   )
 }
 
-export default Language
+export default memo(Language)

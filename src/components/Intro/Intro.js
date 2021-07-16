@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import headshot from './Images/headshot.jpg'
 import BioText from './BioText'
 import './intro.sass'
@@ -26,4 +26,4 @@ const Intro = ({ language }) => {
   )
 }
 
-export default Intro;
+export default memo(Intro)

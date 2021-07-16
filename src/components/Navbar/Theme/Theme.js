@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import IconDay from './Icons/IconDay'
 import IconNight from './Icons/IconNight'
 import IconFire from './Icons/IconFire'
@@ -31,4 +31,4 @@ const Theme = ({ language, theme, toggleTheme }) => (
   </div>
 )
 
-export default Theme
+export default memo(Theme)

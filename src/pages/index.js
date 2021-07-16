@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { memo, useState, useEffect } from 'react'
 import { LazyMotion, domAnimation } from 'framer-motion'
-import Layout from 'components/Layout/Layout'
-import BackgroundPattern from 'components/Layout/BackgroundPattern'
-import Welcome from 'components/Welcome/Welcome'
-import Intro from 'components/Intro/Intro'
-import Projects from 'components/Projects/Projects'
+import Home from './Home'
+import SEO from 'components/SEO/SEO'
+import ConsoleByline from 'components/ConsoleByline/ConsoleByline'
 
-const Home = () => {
+const Index = () => {
   let useTheme = Math.random() < 0.5 ? 'light' : 'dark'
   let useLanguage = 'en'
+  console.log(`Index top useTheme = ${useTheme}`)
 
   if (typeof window !== 'undefined' && window.localStorage) {
     useTheme = window.localStorage.getItem('theme') || useTheme
@@ -16,7 +15,6 @@ const Home = () => {
   }
   const [theme, setTheme] = useState(useTheme)
   const [language, setLanguage] = useState(useLanguage)
-  const [showWelcome, setShowWelcome] = useState('showWelcome')
 
   const toggleTheme = () => {
     let newTheme
@@ -29,41 +27,17 @@ const Home = () => {
     }
   }
 
-  useEffect(
-    () => {
-      let timer1 = setTimeout(() => setShowWelcome('hideWelcome'), 2000);
+  // show byline only once
+  useEffect(() => { ConsoleByline(); return }, [])
 
-      // this will clear Timeout
-      // when component unmount like in willComponentUnmount
-      // and show will not change to true
-      return () => {
-        clearTimeout(timer1);
-      };
-    },
-    // useEffect will run only one time with empty []
-    // if you pass a value to array,
-    // like this - [data]
-    // than clearTimeout will run every time
-    // this value changes (useEffect re-run)
-    []
-  );
-
+  console.log(`Index top useTheme = ${useTheme}`)
+  console.log(`Index bottom theme = ${theme}`)
   return (
     <LazyMotion features={domAnimation} strict>
-      <Welcome language={language} show={showWelcome} />
-      <Layout
-        language={language}
-        setLanguage={setLanguage}
-        theme={theme}
-        toggleTheme={toggleTheme}
-      >
-        <BackgroundPattern theme={theme} />
-        {showWelcome !== 'hideWelcome' && <div style={{ background: '#fff', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100vh', zIndex: 99 }} />}
-        <Intro language={language} />
-        <Projects language={language} theme={theme} />
-      </Layout>
+      <SEO language={language} theme={theme} />
+      <Home language={language} setLanguage={setLanguage} theme={theme} toggleTheme={toggleTheme} />
     </LazyMotion>
   )
 }
 
-export default Home
+export default memo(Index)

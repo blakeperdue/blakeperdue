@@ -9,8 +9,6 @@ const ConsoleByline = () => {
       1000
     )
   }
-
-  return null
 }
 
 export default ConsoleByline

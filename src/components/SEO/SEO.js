@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
+import React, { memo } from 'react'
 import { Helmet } from 'react-helmet'
 import favicon from 'images/favicon.ico'
 
@@ -60,4 +60,4 @@ const SEO = ({ theme, language }) => (
   </Helmet>
 )
 
-export default SEO
+export default memo(SEO)

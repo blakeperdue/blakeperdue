@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { m } from 'framer-motion'
 import BioText from 'components/Intro/BioText'
 import './welcome.sass'
@@ -43,6 +43,7 @@ const variants2 = {
 }
 
 const Welcome = ({ language, show }) => {
+  console.log(`Welcome show = ${show}`)
   return (
     <>
       <m.div
@@ -59,4 +60,4 @@ const Welcome = ({ language, show }) => {
   )
 }
 
-export default Welcome
+export default memo(Welcome)
