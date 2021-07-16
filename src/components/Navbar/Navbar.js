@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Social from './Social/Social'
 import Language from './Language/Language'
 import Theme from './Theme/Theme'
@@ -22,4 +22,4 @@ const Navbar = ({ theme, toggleTheme, language, setLanguage }) => (
   </header>
 )
 
-export default Navbar
+export default memo(Navbar)

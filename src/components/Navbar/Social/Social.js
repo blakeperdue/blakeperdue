@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import IconGithub from './Icons/IconGithub'
 import IconDribbble from './Icons/IconDribbble'
 import IconLinkedIn from './Icons/IconLinkedIn'
@@ -64,4 +64,4 @@ const Social = ({ theme }) => {
   )
 }
 
-export default Social
+export default memo(Social)

@@ -5,10 +5,6 @@ $socialLinkHeight: 32px
   display: flex
   align-items: center
   height: $navbarHeight
-  background: $lightBg
-
-.dark .navbar
-  background: $darkBg
 
 .social-links,
 .social-link,
@@ -18,7 +14,6 @@ $socialLinkHeight: 32px
   flex-direction: row
   align-items: center
   justify-content: flex-end
-  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
 
 .social-links
   height: $navbarHeight
@@ -26,13 +21,23 @@ $socialLinkHeight: 32px
 
 .dark .social-link
   border-color: lighten($darkPlaceholder, 6%)
-  // background: $darkPlaceholder
   svg > path
     fill: $darkText
 
 .light .social-link
   svg > path
     fill: $lightText
+
+.fire .social-link
+  border-color: darken($firePlaceholder, 6%)
+  svg > path
+    fill: $fireText
+  &:hover,
+  &:focus
+    border-color: $fireShadow
+    background: $fireShadow
+    svg > path
+      fill: $fireText
 
 .social-link
   justify-content: center
@@ -58,20 +63,13 @@ $socialLinkHeight: 32px
 .navbar-options
   height: $navbarHeight
 
-
-.dark .theme-toggle
-  color: $darkText
-  svg > path
-    fill: $darkText
-
-
 .theme-toggle
   background: none
   margin-right: 2rem
   color: $lightText
   cursor: pointer
   transition: color 0.2s linear
-  font-weight: 500
+  font-weight: 400
   svg > path
     transition: fill 0.2s linear
   &:hover,
@@ -81,6 +79,23 @@ $socialLinkHeight: 32px
     color: $accent
     svg > path
       fill: $accent
+
+.dark .theme-toggle
+  color: $darkText
+  svg > path
+    fill: $darkText
+
+.fire .theme-toggle
+  color: $fireText
+  svg > path
+    fill: $fireText
+  &:hover,
+  &:active,
+  &:focus
+    color: $fireShadow
+    svg > path
+      fill: $fireShadow
+
 
 .theme-current
   display: flex

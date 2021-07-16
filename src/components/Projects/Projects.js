@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import ProjectsData from './ProjectsData'
 import './projects.sass'
 
@@ -36,4 +36,4 @@ const Projects = ({ language, theme }) => (
   </ul>
 )
 
-export default Projects
+export default memo(Projects)

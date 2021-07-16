@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
-import Layout from 'components/Layout/Layout'
+import React, { memo, useState, useEffect } from 'react'
+import { LazyMotion, domAnimation } from 'framer-motion'
+import Home from './Home'
 import SEO from 'components/SEO/SEO'
-import Intro from 'components/Intro/Intro'
-import Projects from 'components/Projects/Projects'
 import ConsoleByline from 'components/ConsoleByline/ConsoleByline'
 
-const HomePage = () => {
-  let useTheme = Math.random() >= 0.5 ? 'dark' : 'light'
+const Index = () => {
+  let useTheme = Math.random() < 0.5 ? 'light' : 'dark'
   let useLanguage = 'en'
+  console.log(`Index top useTheme = ${useTheme}`)
+
   if (typeof window !== 'undefined' && window.localStorage) {
     useTheme = window.localStorage.getItem('theme') || useTheme
     useLanguage = window.localStorage.getItem('language') || useLanguage
@@ -16,26 +17,27 @@ const HomePage = () => {
   const [language, setLanguage] = useState(useLanguage)
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    let newTheme
+    if (theme === 'light') newTheme = 'dark'
+    else if (theme === 'dark') newTheme = 'fire'
+    else if (theme === 'fire') newTheme = 'light'
     setTheme(newTheme)
     if (typeof window !== 'undefined' && window.localStorage) {
       window.localStorage.setItem('theme', newTheme)
     }
   }
 
+  // show byline only once
+  useEffect(() => { ConsoleByline(); return }, [])
+
+  console.log(`Index top useTheme = ${useTheme}`)
+  console.log(`Index bottom theme = ${theme}`)
   return (
-    <Layout
-      language={language}
-      setLanguage={setLanguage}
-      theme={theme}
-      toggleTheme={toggleTheme}
-    >
-      <SEO theme={theme} lang={language} />
-      <Intro language={language} />
-      <Projects language={language} theme={theme} />
-      <ConsoleByline />
-    </Layout>
+    <LazyMotion features={domAnimation} strict>
+      <SEO language={language} theme={theme} />
+      <Home language={language} setLanguage={setLanguage} theme={theme} toggleTheme={toggleTheme} />
+    </LazyMotion>
   )
 }
 
-export default HomePage
+export default memo(Index)

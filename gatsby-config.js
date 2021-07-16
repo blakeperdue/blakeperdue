@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Blake Perdue – Product leader, designer and developer',
-    description: 'I like to create things. This is a collection of some  of my recent projects.',
+    description: 'I like to create things. This is a collection of some of my recent projects.',
     author: '@blakeperdue',
     siteUrl: 'https://www.blakeperdue.com'
   },
@@ -14,7 +14,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -50,12 +50,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    { // must go after SASS plugin!!
-      resolve: 'gatsby-plugin-minify-classnames',
-      // options: {
-      //   dictionary: 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789',
-      //   enableOnDevelopment: false,
-      // },
-    },
+    // { // must go after SASS plugin!!
+    //   resolve: 'gatsby-plugin-minify-classnames',
+    //   options: {
+    //     dictionary: 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789',
+    //     enableOnDevelopment: true,
+    //     enable: true //process.env.NODE_ENV === 'production'
+    //   },
+    // },
   ],
 }

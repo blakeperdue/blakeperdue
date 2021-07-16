@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import IconDay from './Icons/IconDay'
 import IconNight from './Icons/IconNight'
+import IconFire from './Icons/IconFire'
 
 
 const themeLabels = {
@@ -23,8 +24,11 @@ const Theme = ({ language, theme, toggleTheme }) => (
       {theme === 'light' && (
         <span className="theme-current"><IconDay />&nbsp; Day</span>
       )}
+      {theme === 'fire' && (
+        <span className="theme-current"><IconFire />&nbsp; Fire</span>
+      )}
     </button>
   </div>
 )
 
-export default Theme
+export default memo(Theme)
