@@ -12,9 +12,6 @@ const variants = {
     translateY: 0,
     height: '100vh',
     transition: {
-      // repeat: 1,
-      // repeatType: 'reverse',
-      // repeatDelay: 1.5,
       ease: [0.87, 0, 0.13, 1],
       duration: 1
     }
@@ -42,22 +39,19 @@ const variants2 = {
   }
 }
 
-const Welcome = ({ language, show }) => {
-  console.log(`Welcome show = ${show}`)
-  return (
-    <>
-      <m.div
-        className="welcome-bg"
-        initial="hidden"
-        animate={show}
-        variants={variants}
-      />
-      <m.h1 className="welcome-h1 h1 center" initial="showWelcome" animate={show} variants={variants2}>
-        {BioText[language].h1}&nbsp;
-        <strong className="h1-bold">Blake Perdue</strong>.
-      </m.h1>
-    </>
-  )
-}
+const Welcome = ({ language, show }) => (
+  <>
+    <m.div
+      className="welcome-bg"
+      initial="hidden"
+      animate={show}
+      variants={variants}
+    />
+    <m.h1 className="welcome-h1 h1 center" initial="showWelcome" animate={show} variants={variants2}>
+      {BioText[language].h1}&nbsp;
+      <strong className="h1-bold">Blake Perdue</strong>.
+    </m.h1>
+  </>
+)
 
 export default memo(Welcome)

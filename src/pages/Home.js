@@ -6,7 +6,6 @@ import Projects from 'components/Projects/Projects'
 
 const Home = ({ language = 'en', setLanguage, theme = 'light', toggleTheme }) => {
   const [showWelcome, setShowWelcome] = useState('showWelcome')
-  console.log(`Home theme = ${theme}`)
   useEffect(
     () => {
       let timer1 = setTimeout(() => setShowWelcome('hideWelcome'), 2000);

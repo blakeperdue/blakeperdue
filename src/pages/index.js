@@ -7,7 +7,6 @@ import ConsoleByline from 'components/ConsoleByline/ConsoleByline'
 const Index = () => {
   let useTheme = Math.random() < 0.5 ? 'light' : 'dark'
   let useLanguage = 'en'
-  console.log(`Index top useTheme = ${useTheme}`)
 
   if (typeof window !== 'undefined' && window.localStorage) {
     useTheme = window.localStorage.getItem('theme') || useTheme
@@ -30,8 +29,6 @@ const Index = () => {
   // show byline only once
   useEffect(() => { ConsoleByline(); return }, [])
 
-  console.log(`Index top useTheme = ${useTheme}`)
-  console.log(`Index bottom theme = ${theme}`)
   return (
     <LazyMotion features={domAnimation} strict>
       <SEO language={language} theme={theme} />
