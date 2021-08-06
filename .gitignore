@@ -16,12 +16,8 @@ yarn.lock
 /public-saved-my-files2
 
 # firebase
-/.firebase
-.firebase
-/.firebase/
-/.firebase/*
+.firebase/
 *.cache
-.firebase/hosting.cHVibGlj.cache
 
 # misc
 .DS_Store
