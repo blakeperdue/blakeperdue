@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import ProjectsData from './ProjectsData'
 import './projects.sass'
 
+
 const Projects = ({ language, theme }) => (
   <ul className="projects">
 
